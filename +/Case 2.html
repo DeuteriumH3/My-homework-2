@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Case 1</title>
+    </head>
+    <body>
+    <script>
+        "use strict";
+
+        let sumMoney;
+        let percent;
+        let fiveYearPercent;
+
+        sumMoney = Number(prompt("Введите сумму вклада"));
+        percent = Number(prompt("Введите процент"));
+
+        fiveYearPercent = sumMoney + 5 * (sumMoney * percent / 100);
+
+        console.log("Сумма вклада через 5 лет:", fiveYearPercent);
+    </script>
+    </body>
+</html>

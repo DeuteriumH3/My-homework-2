@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Case 4</title>
+    </head>
+    <body>
+    <script>
+        "use strict";
+
+        let candyPrice;
+        let cookiePrice;
+        let purchaseA;
+        let purchaseB;
+
+        candyPrice = Number(prompt("Введите цену 1 кг конфет"));
+        cookiePrice = Number(prompt("Введите цену 1 кг печенья"));
+
+        purchaseA = candyPrice * 0.3 + cookiePrice * 0.4;
+        purchaseB = 3 * (2 * cookiePrice + 1.8 * candyPrice);
+
+        console.log("Стоимость одной покупки из 300 г конфет и 400 г печенья:", purchaseA);
+        console.log("Стоимость трех покупок, каждая из 2 кг печенья и 1 кг 800 г конфет:", purchaseB);
+    </script>
+    </body>
+</html>
