@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Case 1</title>
+        <title>Case 2</title>
     </head>
     <body>
     <script>
         "use strict";
 
+		/*2. Написать программу (скрипт), которая запрашивает у пользователя сумму вклада в банк и годовой процент, 
+		а затем вычисляет сумму вклада через 5 лет при ежегодном начислении процента на остаток суммы на вкладе.
+		
+		S = (P * I * T / K) / 100;
+		
+		S — выплаченные проценты,
+		P — первоначальная сумма вложений, sumMoney
+		I — годовая ставка, percent
+		T — количество дней вклада,
+		K — количество дней в году — 365 или 366.*/
+
         let sumMoney;
         let percent;
+		let year1;
+		let year2;
+		let year3;
+		let year4;
+		let year5;
         let fiveYearPercent;
 
         sumMoney = Number(prompt("Введите сумму вклада"));
         percent = Number(prompt("Введите процент"));
+		
+		year1 = sumMoney * percent * 365 / 365 / 100;
+		year2 = year1 * percent * 365 / 365 / 100;
+		year3 = year2 * percent * 365 / 365 / 100;
+		year4 = year3 * percent * 365 / 365 / 100;
+		year5 = year4 * percent * 366 / 366 / 100;
 
-        fiveYearPercent = sumMoney + 5 * (sumMoney * percent / 100);
+        fiveYearPercent = sumMoney + year1 + year2 + year3 + year4 + year5;
 
         console.log("Сумма вклада через 5 лет:", fiveYearPercent);
     </script>
